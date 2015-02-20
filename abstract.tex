@@ -1,6 +1,12 @@
 \documentclass[11pt,a4paper,twocolumn]{article}
 
-\usepackage[top=0.5in,bottom=0.5in,left=0.5in,right=0.5in]{geometry}
+% ISB wants ARIAL but that is a MS font which can only be used with LauTeX or
+% XeLaTeX, so helvetica is the next best thing. Damn this makes the paper
+% longer than 2 pages!
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[top=0.5in,bottom=0.5in,left=0.5in,right=0.5in,headheight=1pt,heightrounded]{geometry}
 
 % for images: png, pdf, etc
 \usepackage{graphicx}
@@ -14,9 +20,23 @@
 % for more maths
 \usepackage{amsmath}
 
-\title{Quiet Standing Control Parameter Identification With Direct Collocation}
+\usepackage{fancyhdr}
 
-\author{Jason K. Moore, Antonie van den Bogert}
+\fancypagestyle{firststyle}
+{
+   \fancyhf{}
+   \renewcommand{\headrulewidth}{0pt}
+   \fancyhead[R]{\textbf{XV International Symposium on Computer Simulation in Biomechanics\\
+   July 9th--11th 2015, Edinburgh, UK}}
+}
+
+\renewcommand{\refname}{REFERENCES}
+
+\title{\textbf{QUIET STANDING CONTROL PARAMETER IDENTIFICATION WITH DIRECT
+  COLLOCATION}}
+
+\author{Jason K. Moore and Antonie van den Bogert\\
+Mechanical Engineering, Cleveland State University, Cleveland, OH, USA}
 
 \date{}
 
@@ -24,7 +44,9 @@
 
 \maketitle
 
-\section*{Introduction}
+\thispagestyle{firststyle}
+
+\section*{INTRODUCTION}
 
 It is hypothesized that a human operating during the quiet standing task uses
 feedback to remain upright in the face of perturbations. For various reasons,
@@ -49,7 +71,7 @@ parameter identification because it does not suffer from bias, computation
 times are extremely lower than competing optimization methods, and it is much
 less sensitive to initial guesses than shooting.
 
-\section*{Methods}
+\section*{METHODS}
 
 We make use of a common model of closed loop quiet standing taken from
 \cite{Park2004}. The plant is a two dimensional two body joint torque driven
@@ -135,7 +157,7 @@ Jacobians are formulated symbolically with opty and efficient wrapped C code is
 generated to evaluate them numerically. Finally, IPOPT is used to solve the
 optimization problem.
 
-\section*{Results}
+\section*{RESULTS}
 
 For an example result we simulate the closed loop model for a duration of 20
 seconds under the influence of a platform acceleration with a standard
@@ -173,7 +195,7 @@ known gains.
   \label{tab:relative-error}
 \end{table}
 
-\section*{Discussion}
+\section*{DISCUSSION}
 
 The indirect control parameter identification via direct collocation has
 several advantages to more common nonlinear parameter identification methods.
