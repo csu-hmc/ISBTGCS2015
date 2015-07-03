@@ -3,7 +3,7 @@ import pandas as pd
 import bicycledataprocessor as bdp
 
 dataset = bdp.DataSet()
-run = bdp.Run('00283', dataset, filterFreq=10.0)
+run = bdp.Run('00283', dataset, filterFreq=6.0)
 
 # Create a pandas data frame that can be exported to csv with
 # phi, delta, phid, deltad, psi, Tdelta, Tdeltad
