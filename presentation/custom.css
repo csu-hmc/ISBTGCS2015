@@ -1,3 +1,12 @@
 .reveal section img {
 	padding: 10px;
 }
+.reveal {
+	font-size: 200%;
+}
+.reveal h1 {
+	font-size: 100%;
+}
+.reveal li {
+	margin: 1em 0;
+}
