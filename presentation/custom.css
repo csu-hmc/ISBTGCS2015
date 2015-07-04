@@ -1,12 +1,23 @@
-.reveal section img {
-	padding: 10px;
-}
 .reveal {
-	font-size: 200%;
+	font-size: 150%;
 }
+
 .reveal h1 {
+	font-size: 125%;
+}
+
+.reveal h2 {
 	font-size: 100%;
 }
+
 .reveal li {
-	margin: 1em 0;
+	margin: 0.25em 0;
+}
+
+.reveal section img {
+    padding: 10px;
+}
+
+.reveal blockquote {
+	font-size: 60%;
 }
