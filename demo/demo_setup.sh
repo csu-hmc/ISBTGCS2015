@@ -40,7 +40,9 @@ export PATH=$HOME/miniconda/bin:$PATH
 # Adds the path prepend to bashrc
 echo "PATH=$HOME/miniconda/bin:$PATH" >> $HOME/.bashrc
 # Install all the Python dependencies
-conda install -y -c pydy python=2.7 pip numpy scipy cython matplotlib pandas pytables ipython-notebook pydy
+conda install -y python=2.7 pip numpy scipy cython matplotlib pandas pytables ipython-notebook mpmath fastcache
+pip install https://github.com/sympy/sympy/archive/master.zip
+conda install -y -c pydy
 wget https://bitbucket.org/moorepants/cyipopt/get/tip.zip
 unzip tip.zip
 cd moorepants-cyipopt-beafd15fbfe2
