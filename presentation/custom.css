@@ -2,6 +2,23 @@
 	font-size: 150%;
 }
 
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+.reveal h1, h2, h3 {
+	font-weight: normal;
+	text-shadow: none;
+}
+
+.rendered_html h2 {
+	font-weight: normal;
+}
+
+.rendered_html h3 {
+	font-weight: normal;
+}
+
 .reveal h1 {
 	font-size: 125%;
 }
