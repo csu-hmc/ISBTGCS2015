@@ -1,4 +1,4 @@
-This repository holds the source for the slide deck for my SciPy 2015 talk:
+This repository holds the source for the slide deck for my ISB TGCS 2015 talk:
 
    Quiet standing control parameter identification with direct collocation
 
