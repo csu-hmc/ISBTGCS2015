@@ -42,13 +42,23 @@ in LaTeX and rendered with MathJax.
 
 Save the notebook once you make your edits. Either close and halt the notebook
 (menu option) and the IPython notebook server (CTRL-C at the command line) OR
-just open a second terminal. To view the rendered slide desk, in the terminal
-issue::
+just open a second terminal.
 
-   ipython nbconvert human_control_param_id.ipynb --to slides --post serve
+If you want to add changes to the notebook, make sure to commit your changes
+and push them back to the main repository.
+
+Viewing
+=======
+
+To view the rendered slide desk, in the terminal issue::
+
+   make
+
+or manually with::
+
+   ipython nbconvert human_control_param_id.ipynb --to slides --template=slides_reveal.tpl --post serve
 
 This will open the slides in your default web browser. It is best to use an
 up-to-date web browser. You will need to be connected to the internet for slide
 deck to render properly.
 
-Make sure to commit your changes and push them back to the main repository.

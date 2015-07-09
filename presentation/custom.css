@@ -1,12 +1,12 @@
 .reveal {
-	font-size: 150%;
+	font-size: 200%;
 }
 
 h1, h2, h3 {
 	font-weight: normal;
 }
 
-.reveal h1, h2, h3 {
+/*.reveal h1, h2, h3 {
 	font-weight: normal;
 	text-shadow: none;
 }
@@ -18,6 +18,7 @@ h1, h2, h3 {
 .rendered_html h3 {
 	font-weight: normal;
 }
+*/
 
 .reveal h1 {
 	font-size: 125%;
