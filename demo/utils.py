@@ -22,14 +22,16 @@ def pydy_n_link_pendulum_scene(sys):
             length = c
             break
 
-    cart_shape = Cube(0.3, color='red')
-    joint_shape = Sphere(color='blue', radius=0.1)
-    link_shape = Cylinder(length, 0.05, color='blue')
+    cart_shape = Cube(0.3, color='red', name='cart')
 
     viz_frames = [VisualizationFrame(inertial_frame, cart_point,
                                      cart_shape)]
 
     for i, particle in enumerate(particles):
+        joint_shape = Sphere(color='blue', radius=0.1,
+                             name='joint{}'.format(i))
+        link_shape = Cylinder(length, 0.05, color='blue',
+                              name='link{}'.format(i))
         viz_frames.append(VisualizationFrame(inertial_frame, particle,
                                              joint_shape))
 
